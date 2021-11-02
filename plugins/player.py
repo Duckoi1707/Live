@@ -482,7 +482,7 @@ allcmd = ["play", "player", f"play@{Config.BOT_USERNAME}", f"player@{Config.BOT_
 
 @Client.on_message(filters.command(admincmds) & ~admin_filter & chat_filter)
 async def notforu(_, m: Message):
-    k = await _.send_cached_media(chat_id=m.chat.id, file_id="CAADBQADEgQAAtMJyFVJOe6-VqYVzAI", caption="Bạn không được ủy quyền", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚡️Join Here', url='https://t.me/yeu69')]]))
+    k = await _.send_cached_media(chat_id=m.chat.id, file_id="CAADBQADEgQAAtMJyFVJOe6-VqYVzAI", caption="Bạn không được ủy quyền", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚡️ Cập nhật', url='https://t.me/owogram')]]))
     await delete_messages([m, k])
 
 @Client.on_message(filters.command(allcmd) & ~chat_filter & filters.group)
@@ -501,9 +501,9 @@ async def not_chat(_, m: Message):
     else:
         buttons = [
             [
-                InlineKeyboardButton('⚡️ Nhóm', url='https://t.me/yeu69'),
-                InlineKeyboardButton('🧩 Join Here', url='https://t.me/joinchat/BvHYpFNhr9o1M2Y9'),
+                InlineKeyboardButton('⚡️ Bot', url='https://t.me/owogram/44'),
+                InlineKeyboardButton('🧩 Cập nhật', url='https://t.me/owogram'),
             ]
             ]
-        await m.reply("<b>Bạn không thể sử dụng bot này trong nhóm này, vì vậy bạn phải tạo bot của riêng mình từ bên dưới.</b>", disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(buttons))
+        await m.reply("<b>Bạn không thể sử dụng bot này trong nhóm này, vì vậy bạn phải tạo bot của riêng mình từ @owogram.</b>", disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(buttons))
 
