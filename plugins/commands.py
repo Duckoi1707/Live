@@ -129,8 +129,8 @@ async def start(client, message):
         return
     buttons = [
         [
-            InlineKeyboardButton('⚙️ Kênh', url='https://t.me/yeu69'),
-            InlineKeyboardButton('🧩 Nhóm', url='http://t.me/joinchat/BvHYpFNhr9o1M2Y9')
+            InlineKeyboardButton('⚙️ Bot khác', url='https://t.me/owogram/44'),
+            InlineKeyboardButton('🧩 Cập nhật', url='http://t.me/owogram')
         ],
         [
             InlineKeyboardButton('👨🏼‍🦯 Công cụ', callback_data='help_main'),
@@ -188,11 +188,11 @@ async def show_help(client, message):
 async def repo_(client, message):
     buttons = [
         [
-            InlineKeyboardButton('🧩 Kênh', url='https://t.me/banhbaothit'),
-            InlineKeyboardButton('⚙️ Nhóm', url='https://t.me/yeu69'),     
+            InlineKeyboardButton('⚙️ Bot khác', url='https://t.me/owogram/44'),
+            InlineKeyboardButton('🧩 Cập nhật', url='http://t.me/owogram'),     
         ],
         [
-            InlineKeyboardButton("Box chát ❤", url='http://t.me/joinchat/BvHYpFNhr9o1M2Y9'),
+            InlineKeyboardButton("⛔ Báo lỗi", url='http://t.me/ryostar'),
             InlineKeyboardButton('🗑 Đóng', callback_data='close'),
         ]
     ]
