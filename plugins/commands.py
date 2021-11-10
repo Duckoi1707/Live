@@ -129,8 +129,8 @@ async def start(client, message):
         return
     buttons = [
         [
-            InlineKeyboardButton('⚙️ Bot khác', url='https://t.me/owogram/44'),
-            InlineKeyboardButton('🧩 Cập nhật', url='http://t.me/owogram')
+            InlineKeyboardButton('⚙️ Bot khác', url='https://t.me/GoGo1707'),
+            InlineKeyboardButton('🧩 Cập nhật', url='http://t.me/GoGo1707')
         ],
         [
             InlineKeyboardButton('👨🏼‍🦯 Công cụ', callback_data='help_main'),
@@ -188,11 +188,11 @@ async def show_help(client, message):
 async def repo_(client, message):
     buttons = [
         [
-            InlineKeyboardButton('⚙️ Bot khác', url='https://t.me/owogram/44'),
-            InlineKeyboardButton('🧩 Cập nhật', url='http://t.me/owogram'),     
+            InlineKeyboardButton('⚙️ Bot khác', url='https://t.me/Gogo1707'),
+            InlineKeyboardButton('🧩 Cập nhật', url='http://t.me/Gogo1707'),     
         ],
         [
-            InlineKeyboardButton("⛔ Báo lỗi", url='http://t.me/ryostar'),
+            InlineKeyboardButton("⛔ Báo lỗi", url='http://t.me/GoGo1707'),
             InlineKeyboardButton('🗑 Đóng', callback_data='close'),
         ]
     ]
