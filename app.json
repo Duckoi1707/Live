@@ -1,7 +1,7 @@
 {
-    "name": "VideoPlayerTG",
+    "name": "Live",
     "description": "Telegram bot to stream video in telegram VC",
-    "repository": "https://github.com/telegramcode/VideoPlayerTG",
+    "repository": "https://github.com/Duckoi1707/Live/tree/patch-2",
     "stack": "container",
     "keywords": [
       "telegram",
