@@ -43,7 +43,7 @@ async def add_admin(client, message):
             try:
                 user=await client.get_users(user)
             except Exception as e:
-                k=await message.reply(f"Tôi không thể tìm thấy người dùng đó.\nError: {e}")
+                k=await message.reply(f"Tôi không thể tìm thấy người chơi đó.\nError: {e}")
                 LOGGER.error(f"Không thể tìm thấy người dùng - {e}", exc_info=True)
                 await delete_messages([message, k])
                 return
