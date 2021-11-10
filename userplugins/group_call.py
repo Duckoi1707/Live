@@ -114,7 +114,7 @@ async def service_msg(client, message):
         k=scheduler.get_job(str(Config.CHAT), jobstore=None) #scheduled records
         if k:
             await start_record_stream()
-            LOGGER.info("Đang tiếp tục ghi..")
+            LOGGER.info("Đang tiếp tục Ghi...")
         elif Config.WAS_RECORDING:
             LOGGER.info("Bản ghi trước đó đã bị kết thúc đột ngột, Hiện đang tiếp tục bản ghi.")
             await start_record_stream()#for unscheduled
