@@ -1467,8 +1467,8 @@ async def get_buttons():
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton(f"🎸 Start the Player", callback_data="restart"),
-                    InlineKeyboardButton('🗑 Close', callback_data='close'),
+                    InlineKeyboardButton(f"🎸 Khởi động trình phát", callback_data="restart"),
+                    InlineKeyboardButton('🗑 Gần', callback_data='close'),
                 ],
             ]
             )
@@ -1480,8 +1480,8 @@ async def get_buttons():
                 ],
                 [
                     InlineKeyboardButton(f"⏯ {get_pause(Config.PAUSE)}", callback_data=f"{get_pause(Config.PAUSE)}"),
-                    InlineKeyboardButton('🔊 Volume Control', callback_data='volume_main'),
-                    InlineKeyboardButton('🗑 Close', callback_data='close'),
+                    InlineKeyboardButton('🔊 Kiểm soát âm lượng', callback_data='volume_main'),
+                    InlineKeyboardButton('🗑 Gần', callback_data='close'),
                 ],
             ]
             )
@@ -1492,18 +1492,18 @@ async def get_buttons():
                     InlineKeyboardButton(f"{get_player_string()}", callback_data='info_player'),
                 ],
                 [
-                    InlineKeyboardButton("⏮ Rewind", callback_data='rewind'),
+                    InlineKeyboardButton("⏮ Tua lại", callback_data='rewind'),
                     InlineKeyboardButton(f"⏯ {get_pause(Config.PAUSE)}", callback_data=f"{get_pause(Config.PAUSE)}"),
-                    InlineKeyboardButton(f"⏭ Seek", callback_data='seek'),
+                    InlineKeyboardButton(f"⏭ Tìm kiếm", callback_data='seek'),
                 ],
                 [
-                    InlineKeyboardButton("🔄 Shuffle", callback_data="shuffle"),
-                    InlineKeyboardButton("⏩ Skip", callback_data="skip"),
-                    InlineKeyboardButton("⏮ Replay", callback_data="replay"),
+                    InlineKeyboardButton("🔄 Xáo trộn", callback_data="shuffle"),
+                    InlineKeyboardButton("⏩ Nhảy", callback_data="skip"),
+                    InlineKeyboardButton("⏮ phát lại", callback_data="replay"),
                 ],
                 [
-                    InlineKeyboardButton('🔊 Volume Control', callback_data='volume_main'),
-                    InlineKeyboardButton('🗑 Close', callback_data='close'),
+                    InlineKeyboardButton('🔊 Kiểm soát âm lượng', callback_data='volume_main'),
+                    InlineKeyboardButton('🗑 Gần', callback_data='close'),
                 ]
             ]
             )
@@ -1514,31 +1514,31 @@ async def settings_panel():
     reply_markup=InlineKeyboardMarkup(
         [
             [
-               InlineKeyboardButton(f"Player Mode", callback_data='info_mode'),
-               InlineKeyboardButton(f"{'🔂 Non Stop Playback' if Config.IS_LOOP else '▶️ Play and Leave'}", callback_data='is_loop'),
+               InlineKeyboardButton(f"Chế độ người chơi", callback_data='info_mode'),
+               InlineKeyboardButton(f"{'🔂 Phát lại không ngừng' if Config.IS_LOOP else '▶️ Chơi và rời đi'}", callback_data='is_loop'),
             ],
             [
-                InlineKeyboardButton("🎞 Video", callback_data=f"info_video"),
-                InlineKeyboardButton(f"{'📺 Enabled' if Config.IS_VIDEO else '🎙 Disabled'}", callback_data='is_video'),
+                InlineKeyboardButton("🎞 Băng hình", callback_data=f"info_video"),
+                InlineKeyboardButton(f"{'📺 Đã bật' if Config.IS_VIDEO else '🎙 Disabled'}", callback_data='is_video'),
             ],
             [
-                InlineKeyboardButton("🤴 Admin Only", callback_data=f"info_admin"),
-                InlineKeyboardButton(f"{'🔒 Enabled' if Config.ADMIN_ONLY else '🔓 Disabled'}", callback_data='admin_only'),
+                InlineKeyboardButton("🤴 Chỉ dành cho quản trị viên", callback_data=f"info_admin"),
+                InlineKeyboardButton(f"{'🔒 Đã bật' if Config.ADMIN_ONLY else '🔓 Disabled'}", callback_data='admin_only'),
             ],
             [
-                InlineKeyboardButton("🪶 Edit Title", callback_data=f"info_title"),
-                InlineKeyboardButton(f"{'✏️ Enabled' if Config.EDIT_TITLE else '🚫 Disabled'}", callback_data='edit_title'),
+                InlineKeyboardButton("🪶 Chỉnh sửa tiêu đề", callback_data=f"info_title"),
+                InlineKeyboardButton(f"{'✏️ Đã bật' if Config.EDIT_TITLE else '🚫 Disabled'}", callback_data='edit_title'),
             ],
             [
-                InlineKeyboardButton("🔀 Shuffle Mode", callback_data=f"info_shuffle"),
-                InlineKeyboardButton(f"{'✅ Enabled' if Config.SHUFFLE else '🚫 Disabled'}", callback_data='set_shuffle'),
+                InlineKeyboardButton("🔀 Chế độ phát ngẫu nhiên", callback_data=f"info_shuffle"),
+                InlineKeyboardButton(f"{'✅ Đã bật' if Config.SHUFFLE else '🚫 Disabled'}", callback_data='set_shuffle'),
             ],
             [
-                InlineKeyboardButton("👮 Auto Reply (PM Permit)", callback_data=f"info_reply"),
-                InlineKeyboardButton(f"{'✅ Enabled' if Config.REPLY_PM else '🚫 Disabled'}", callback_data='reply_msg'),
+                InlineKeyboardButton("👮 Trả Lời Tự Động", callback_data=f"info_reply"),
+                InlineKeyboardButton(f"{'✅ Đã bật' if Config.REPLY_PM else '🚫 Disabled'}", callback_data='reply_msg'),
             ],
             [
-                InlineKeyboardButton('🗑 Close', callback_data='close'),
+                InlineKeyboardButton('🗑 Gần', callback_data='close'),
             ]
             
         ]
@@ -1589,8 +1589,8 @@ async def volume_buttons():
             InlineKeyboardButton(f"+ 10", callback_data='volume_add'),
         ],
         [
-            InlineKeyboardButton(f"🔙 Back", callback_data='volume_back'),
-            InlineKeyboardButton('🗑 Close', callback_data='close'),
+            InlineKeyboardButton(f"🔙 Mặt sau", callback_data='volume_back'),
+            InlineKeyboardButton('🗑 Gần', callback_data='close'),
         ]
         ]
     )
