@@ -83,7 +83,7 @@ async def reply(client, message):
         Config.msg[message.chat.id]={"msg":m.updates[1].message.id, "s":message.message_id}
     except BotInlineDisabled:
         LOGGER.error(f"Error: Chế độ nội tuyến cho @{Config.BOT_USERNAME} không được kích hoạt. Bật từ @Botfather để bật PM Permit.")
-        await message.reply(f"{Config.REPLY_MESSAGE}\n\n<b>Inline chưa kích hoạt - Chi tiết tham khảo @owogram</b>", disable_web_page_preview=True)
+        await message.reply(f"{Config.REPLY_MESSAGE}\n\n<b>Đây Là Tin Nhắn Trả Lời Tự Động\nQuản Trị Viên Bot @OGGYVN</b>", disable_web_page_preview=True)
     except Exception as e:
         LOGGER.error(e, exc_info=True)
         pass
