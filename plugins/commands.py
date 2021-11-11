@@ -129,8 +129,8 @@ async def start(client, message):
         return
     buttons = [
         [
-            InlineKeyboardButton('⚙️ Bot khác', url='https://t.me/Gogo1707'),
-            InlineKeyboardButton('🧩 Cập nhật', url='http://t.me/Gogo1707')
+            InlineKeyboardButton('⚙️ Bot khác', url='https://t.me/HoTroOggy'),
+            InlineKeyboardButton('🧩 Cập nhật', url='http://t.me/Oggyvn')
         ],
         [
             InlineKeyboardButton('👨🏼‍🦯 Công cụ', callback_data='help_main'),
