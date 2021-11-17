@@ -1440,21 +1440,21 @@ async def get_playlist_str():
     if not Config.CALL_STATUS:
         pl="Player is idle and no song is playing.ㅤㅤㅤㅤ"
     if Config.STREAM_LINK:
-        pl = f"🔈 Streaming [Live Stream]({Config.STREAM_LINK}) ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ"
+        pl = f"🔈 Truyền trực tuyến [Live Stream]({Config.STREAM_LINK}) ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ"
     elif not Config.playlist:
-        pl = f"🔈 Playlist is empty. Streaming [STARTUP_STREAM]({Config.STREAM_URL})ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ"
+        pl = f"🔈 Danh sách phát trống. Streaming [STARTUP_STREAM]({Config.STREAM_URL})ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ"
     else:
         if len(Config.playlist)>=25:
             tplaylist=Config.playlist[:25]
             pl=f"Listing first 25 songs of total {len(Config.playlist)} songs.\n"
-            pl += f"▶️ **Playlist**: ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ\n" + "\n".join([
-                f"**{i}**. **🎸{x[1]}**\n   👤**Requested by:** {x[4]}"
+            pl += f"▶️ **Danh sách phát**: ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ\n" + "\n".join([
+                f"**{i}**. **🎸{x[1]}**\n   👤**Được yêu cầu bởi:** {x[4]}"
                 for i, x in enumerate(tplaylist)
                 ])
             tplaylist.clear()
         else:
-            pl = f"▶️ **Playlist**: ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ\n" + "\n".join([
-                f"**{i}**. **🎸{x[1]}**\n   👤**Requested by:** {x[4]}\n"
+            pl = f"▶️ **Danh sách phát**: ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ\n" + "\n".join([
+                f"**{i}**. **🎸{x[1]}**\n   👤**Được yêu cầu bởi:** {x[4]}\n"
                 for i, x in enumerate(Config.playlist)
             ])
     return pl
@@ -1519,23 +1519,23 @@ async def settings_panel():
             ],
             [
                 InlineKeyboardButton("🎞 Băng hình", callback_data=f"info_video"),
-                InlineKeyboardButton(f"{'📺 Đã bật' if Config.IS_VIDEO else '🎙 Disabled'}", callback_data='is_video'),
+                InlineKeyboardButton(f"{'📺 Đã bật' if Config.IS_VIDEO else '🎙 Vô hiệu hóa'}", callback_data='is_video'),
             ],
             [
                 InlineKeyboardButton("🤴 Chỉ dành cho quản trị viên", callback_data=f"info_admin"),
-                InlineKeyboardButton(f"{'🔒 Đã bật' if Config.ADMIN_ONLY else '🔓 Disabled'}", callback_data='admin_only'),
+                InlineKeyboardButton(f"{'🔒 Đã bật' if Config.ADMIN_ONLY else '🔓 Vô hiệu hóa'}", callback_data='admin_only'),
             ],
             [
                 InlineKeyboardButton("🪶 Chỉnh sửa tiêu đề", callback_data=f"info_title"),
-                InlineKeyboardButton(f"{'✏️ Đã bật' if Config.EDIT_TITLE else '🚫 Disabled'}", callback_data='edit_title'),
+                InlineKeyboardButton(f"{'✏️ Đã bật' if Config.EDIT_TITLE else '🚫 Vô hiệu hóa'}", callback_data='edit_title'),
             ],
             [
                 InlineKeyboardButton("🔀 Chế độ phát ngẫu nhiên", callback_data=f"info_shuffle"),
-                InlineKeyboardButton(f"{'✅ Đã bật' if Config.SHUFFLE else '🚫 Disabled'}", callback_data='set_shuffle'),
+                InlineKeyboardButton(f"{'✅ Đã bật' if Config.SHUFFLE else '🚫 Vô hiệu hoá'}", callback_data='set_shuffle'),
             ],
             [
                 InlineKeyboardButton("👮 Trả Lời Tự Động", callback_data=f"info_reply"),
-                InlineKeyboardButton(f"{'✅ Đã bật' if Config.REPLY_PM else '🚫 Disabled'}", callback_data='reply_msg'),
+                InlineKeyboardButton(f"{'✅ Đã bật' if Config.REPLY_PM else '🚫 Vô hiệu hóa'}", callback_data='reply_msg'),
             ],
             [
                 InlineKeyboardButton('🗑 Gần', callback_data='close'),
