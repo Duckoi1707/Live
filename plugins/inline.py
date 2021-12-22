@@ -29,12 +29,7 @@ from pyrogram import (
 )
 
 
-buttons = [
-    [
-        
-        
-    ]
-    ]
+
 def get_cmd(dur):
     if dur:
         return "/play"
